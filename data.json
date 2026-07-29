@@ -13,7 +13,7 @@
     "description": "فراخ طازجة مشوية على الفحم بأكهل التتبيلات",
     "sizes": "فرخة: 360 ج.م | نص: 180 ج.م | ربع: 90 ج.م",
     "price": "360",
-    "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1000&q=80"
+    "image": "Charcoal-grilled chicken.png"
   },
   {
     "category": "فراخ السلام",
@@ -21,7 +21,7 @@
     "description": "فراخ شيش مخلية ومتبلة",
     "sizes": "فرخة: 360 ج.م | نص: 180 ج.م | ربع: 90 ج.م",
     "price": "360",
-    "image": "https://images.unsplash.com/photo-1603048588665-791ca8aea617?w=1000&q=80"
+    "image": "Shish Chicken.png"
   },
   {
     "category": "فراخ السلام",
@@ -29,7 +29,7 @@
     "description": "سيخ شيش طاووق طري ومتبل",
     "sizes": "فرخة: 460 ج.م | نص: 230 ج.م | ربع: 115 ج.م",
     "price": "460",
-    "image": "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=1000&q=80"
+    "image": "Shish Tawook Chicken.png"
   },
   {
     "category": "فراخ السلام",
@@ -37,7 +37,7 @@
     "description": "قطع فراخ بانية مقرمشة",
     "sizes": "فرخة: 460 ج.م | نص: 230 ج.م | ربع: 115 ج.م",
     "price": "460",
-    "image": "https://images.unsplash.com/photo-1562967914-608f82629710?w=1000&q=80"
+    "image": "Breaded Chicken Cutlets (Chicken Pane).png"
   },
   {
     "category": "فراخ السلام",
