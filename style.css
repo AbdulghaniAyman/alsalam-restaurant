@@ -34,38 +34,82 @@ body {
     flex-direction: column;
 }
 
-/* هيدر اللوجو الفاتح الأنيق */
+/* هيدر اللوجو مع أنيميشن متحرك وجذاب */
 .main-header {
     text-align: center;
-    padding: 30px 0;
+    padding: 30px 20px;
     background: #ffffff;
     border-radius: 16px;
-    box-shadow: var(--shadow);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
     margin-bottom: 25px;
-    border: 1px solid var(--border-color);
+    border: 1px solid #e9ecef;
+    animation: fadeInDown 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .logo-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 .brand-logo {
-    width: 100px;
-    height: 100px;
+    max-width: 180px;
+    max-height: 90px;
+    width: auto;
+    height: auto;
     object-fit: contain;
-    border-radius: 50%;
-    padding: 5px;
-    background: #fff;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: pulseLogo 3s infinite ease-in-out;
+}
+
+/* تأثير تحرك عند المرور بالماوس */
+.brand-logo:hover {
+    transform: scale(1.08) rotate(2deg);
 }
 
 .logo-container p {
-    color: var(--text-muted);
+    color: #7f8c8d;
     font-size: 15px;
     font-weight: 600;
+    letter-spacing: 0.5px;
+    animation: fadeInUp 1s ease 0.2s both;
+}
+
+/* تعريف الحركات (Animations) */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulseLogo {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03);
+    }
 }
 
 /* شريط الأقسام */
