@@ -4,83 +4,277 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مطعم السلام - القائمة الرئيسية</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #12161c;
+            --card-bg: #1e2530;
+            --accent-color: #f59e0b;
+            --text-color: #ffffff;
+            --text-muted: #94a3b8;
+        }
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+        }
+        .app-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+        .main-header {
+            text-align: center;
+            padding: 20px 0;
+        }
+        .brand-logo {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            border-radius: 50%;
+            background: #fff;
+            padding: 5px;
+        }
+        .categories-bar {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding: 10px 0;
+            white-space: nowrap;
+            scrollbar-width: none;
+        }
+        .categories-bar::-webkit-scrollbar { display: none; }
+        .cat-pill {
+            background: var(--card-bg);
+            color: var(--text-color);
+            border: 1px solid #334155;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: 'Cairo', sans-serif;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+        .cat-pill.active {
+            background: var(--accent-color);
+            color: #000;
+            font-weight: 700;
+            border-color: var(--accent-color);
+        }
+        .items-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .item-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            cursor: pointer;
+            border: 1px solid #2a3441;
+            transition: 0.2s;
+        }
+        .item-card:hover { border-color: var(--accent-color); }
+        .item-img-box img {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        .item-name {
+            font-size: 16px;
+            font-weight: 700;
+            margin: 0 0 5px 0;
+        }
+        .item-action-hint {
+            font-size: 12px;
+            color: var(--accent-color);
+        }
+        /* Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            padding: 20px;
+        }
+        .modal-overlay.active { display: flex; }
+        .modal-content {
+            background: var(--card-bg);
+            width: 100%;
+            max-width: 400px;
+            border-radius: 15px;
+            padding: 20px;
+            position: relative;
+            text-align: center;
+        }
+        .close-modal {
+            position: absolute;
+            top: 15px; left: 15px;
+            background: none; border: none;
+            color: #fff; font-size: 20px; cursor: pointer;
+        }
+        .modal-img-container img {
+            width: 120px; height: 120px;
+            border-radius: 50%; object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .sizes-container {
+            display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin: 15px 0;
+        }
+        .size-pill {
+            background: #12161c; border: 1px solid #475569; color: #fff;
+            padding: 6px 14px; border-radius: 8px; cursor: pointer; font-family: 'Cairo', sans-serif;
+        }
+        .size-pill.active { background: var(--accent-color); color: #000; font-weight: bold; border-color: var(--accent-color); }
+        .order-now-btn {
+            background: #25d366; color: #fff; border: none; width: 100%;
+            padding: 12px; border-radius: 8px; font-weight: bold; font-size: 16px;
+            cursor: pointer; margin-top: 15px; font-family: 'Cairo', sans-serif;
+        }
+        .site-footer { text-align: center; margin-top: 40px; padding: 20px 0; color: var(--text-muted); font-size: 14px; }
+    </style>
 </head>
 <body>
 
     <div class="app-container">
-        <!-- هيدر اللوجو -->
         <header class="main-header">
-            <div class="logo-container">
-                <img src="logo.svg" alt="مطعم السلام" class="brand-logo" onerror="this.src='logo.png'">
-                <p>أصالة المذاق المصري والعربي</p>
-            </div>
+            <img src="logo.png" alt="مطعم السلام" class="brand-logo" onerror="this.src='logo.svg'">
+            <p>أصالة المذاق المصري والعربي</p>
         </header>
 
-        <!-- شريط الأقسام الأفقي العلوي -->
-        <nav class="categories-bar-wrapper">
-            <div id="categories-bar" class="categories-bar">
-                <!-- يتم تعبئتها عبر الجافاسكريبت -->
-            </div>
+        <nav>
+            <div id="categories-bar" class="categories-bar"></div>
         </nav>
 
-        <!-- شبكة عرض الأصناف -->
-        <main class="container">
-            <div id="items-grid" class="items-grid">
-                <!-- يتم تعبئتها عبر الجافاسكريبت -->
-            </div>
+        <main>
+            <div id="items-grid" class="items-grid"></div>
         </main>
 
-        <!-- نافذة تفاصيل الصنف واختيار الأحجام (Modal) -->
         <div id="item-modal" class="modal-overlay">
             <div class="modal-content">
                 <button class="close-modal" id="close-modal-btn"><i class="fa-solid fa-xmark"></i></button>
                 <div class="modal-img-container">
-                    <img id="modal-img" src="" alt="صنف الطعام">
+                    <img id="modal-img" src="" alt="">
                 </div>
-                <h3 id="modal-title">اسم الصنف</h3>
-                <p id="modal-desc">وصف الصنف</p>
-                
-                <!-- أزرار اختيار الأحجام -->
-                <div id="modal-sizes-container" class="sizes-container">
-                    <!-- يتم توليد الأحجام هنا -->
+                <h3 id="modal-title"></h3>
+                <p id="modal-desc"></p>
+                <div id="modal-sizes-container" class="sizes-container"></div>
+                <div style="font-size: 18px; font-weight: bold; margin-top: 10px;">
+                    السعر: <span id="modal-price">0</span> جنيه
                 </div>
-
-                <!-- السعر المتغير -->
-                <div class="modal-price-box">
-                    <span id="modal-price">0</span> <span class="currency">جنيه</span>
-                </div>
-
-                <button class="order-now-btn" id="order-now-btn">
-                    اطلب الآن <i class="fa-solid fa-fire"></i>
-                </button>
+                <button class="order-now-btn" id="order-now-btn">اطلب عبر واتساب <i class="fa-brands fa-whatsapp"></i></button>
             </div>
         </div>
 
-        <!-- معلومات التواصل والعنوان ورقم المطور -->
         <footer class="site-footer">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3><i class="fa-solid fa-location-dot"></i> العنوان</h3>
-                    <p>مدينة السادات - السوق التجاري - المنطقة الرابعة</p>
-                </div>
-                <div class="footer-section">
-                    <h3><i class="fa-solid fa-phone"></i> تواصل معنا</h3>
-                    <div class="phones">
-                        <a href="tel:0100638288">0100638288</a>
-                        <span>-</span>
-                        <a href="tel:01006646943">01006646943</a>
-                    </div>
-                </div>
-            </div>
-            <div class="designer-credits">
-                تصميم وتطوير الواجهة البرمجية: <a href="tel:01020867958" class="designer-phone">01020867958</a>
-            </div>
+            <p>مدينة السادات - السوق التجاري - المنطقة الرابعة</p>
+            <p>تواصل معنا: 0100638288 - 01006646943</p>
         </footer>
     </div>
 
-    <script src="script.js?v=2"></script>
+    <script>
+        const menuData = [
+            { id: 1, category: "فراخ السلام", name: "فراخ شواية", description: "فراخ شواية طازجة ومتبلة بأفضل البهارات", image: "item1.jpg", sizes: [{ name: "ربع", price: 90 }, { name: "نص", price: 180 }, { name: "فرخة", price: 360 }] },
+            { id: 2, category: "فراخ السلام", name: "فراخ مشوية علي الفحم", description: "فراخ مشوية على الفحم الحقيقي بمذاق مدخن", image: "item2.jpg", sizes: [{ name: "ربع", price: 90 }, { name: "نص", price: 180 }, { name: "فرخة", price: 360 }] },
+            { id: 3, category: "صواني السلام", name: "صنية السلام", description: "كيلوا كفتة + فرخة ونصف شيش + معمر وملوخية", image: "item7.jpg", sizes: [{ name: "صنية كاملة", price: 2400 }] },
+            { id: 4, category: "المشروبات", name: "كانز بيبسي", description: "مشروب غازي بيبسي بارد", image: "item13.jpg", sizes: [{ name: "كانز", price: 25 }] },
+            { id: 5, category: "كريب السلام", name: "كريب بطاطس", description: "كريب محشو بطاطس مقرمشة وصوصات", image: "item16.jpg", sizes: [{ name: "عادي", price: 70 }] }
+        ];
+
+        let currentCategory = "الكل";
+        let activeItem = null;
+        let activeSizeIndex = 0;
+
+        const categories = ["الكل", ...new Set(menuData.map(item => item.category))];
+        const categoriesBar = document.getElementById("categories-bar");
+        const itemsGrid = document.getElementById("items-grid");
+        const itemModal = document.getElementById("item-modal");
+        const closeModalBtn = document.getElementById("close-modal-btn");
+        const modalImg = document.getElementById("modal-img");
+        const modalTitle = document.getElementById("modal-title");
+        const modalDesc = document.getElementById("modal-desc");
+        const modalSizesContainer = document.getElementById("modal-sizes-container");
+        const modalPrice = document.getElementById("modal-price");
+        const orderNowBtn = document.getElementById("order-now-btn");
+
+        function renderCategories() {
+            categoriesBar.innerHTML = "";
+            categories.forEach(cat => {
+                const pill = document.createElement("button");
+                pill.className = `cat-pill ${cat === currentCategory ? "active" : ""}`;
+                pill.textContent = cat;
+                pill.onclick = () => { currentCategory = cat; renderCategories(); renderItems(); };
+                categoriesBar.appendChild(pill);
+            });
+        }
+
+        function renderItems() {
+            itemsGrid.innerHTML = "";
+            const filtered = currentCategory === "الكل" ? menuData : menuData.filter(i => i.category === currentCategory);
+            filtered.forEach(item => {
+                const card = document.createElement("div");
+                card.className = "item-card";
+                card.onclick = () => openModal(item);
+                card.innerHTML = `
+                    <div class="item-img-box"><img src="${item.image}" alt="${item.name}" onerror="this.src='logo.png'"></div>
+                    <div><h3 class="item-name">${item.name}</h3><span class="item-action-hint">اختار الحجم والسعر</span></div>
+                `;
+                itemsGrid.appendChild(card);
+            });
+        }
+
+        function openModal(item) {
+            activeItem = item;
+            activeSizeIndex = 0;
+            modalImg.src = item.image;
+            modalTitle.textContent = item.name;
+            modalDesc.textContent = item.description;
+            renderSizes();
+            updateModalPrice();
+            itemModal.classList.add("active");
+        }
+
+        function renderSizes() {
+            modalSizesContainer.innerHTML = "";
+            activeItem.sizes.forEach((s, idx) => {
+                const pill = document.createElement("button");
+                pill.className = `size-pill ${idx === activeSizeIndex ? "active" : ""}`;
+                pill.textContent = s.name;
+                pill.onclick = () => { activeSizeIndex = idx; renderSizes(); updateModalPrice(); };
+                modalSizesContainer.appendChild(pill);
+            });
+        }
+
+        function updateModalPrice() {
+            if (activeItem && activeItem.sizes[activeSizeIndex]) {
+                modalPrice.textContent = activeItem.sizes[activeSizeIndex].price;
+            }
+        }
+
+        closeModalBtn.onclick = () => itemModal.classList.remove("active");
+        itemModal.onclick = (e) => { if(e.target === itemModal) itemModal.classList.remove("active"); };
+
+        orderNowBtn.onclick = () => {
+            if (!activeItem) return;
+            const s = activeItem.sizes[activeSizeIndex];
+            const msg = `أريد طلب: ${activeItem.name} - الحجم: ${s.name} - السعر: ${s.price} جنيه`;
+            window.open(`https://wa.me/20100638288?text=${encodeURIComponent(msg)}`, '_blank');
+        };
+
+        renderCategories();
+        renderItems();
+    </script>
 </body>
 </html>
