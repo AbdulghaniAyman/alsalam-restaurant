@@ -1,38 +1,53 @@
-document.addEventListener("DOMContentLoaded", () => {
-    // رابط الـ Raw الخاص بك الذي أرسلته للتو
 const jsonUrl = "https://raw.githubusercontent.com/AbdulghaniAyman/alsalam-restaurant/refs/heads/main/data.json";
-    
-    const menuContainer = document.getElementById("menu-container");
 
+document.addEventListener("DOMContentLoaded", () => {
     fetch(jsonUrl)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("فشل في تحميل بيانات المنيو");
-            }
-            return response.json();
-        })
+        .then(response => response.json())
         .then(data => {
-            menuContainer.innerHTML = ""; 
-            
+            const menuContainer = document.getElementById("menu-container");
+            menuContainer.innerHTML = "";
+
+            // تجميع الأطباق حسب الأقسام
+            const categories = {};
             data.forEach(item => {
-                const card = document.createElement("div");
-                card.classList.add("menu-card");
-
-                card.innerHTML = `
-                    <img src="${item.image}" alt="${item.name}">
-                    <div class="card-content">
-                        <h3>${item.name}</h3>
-                        <p>${item.description}</p>
-                        <p style="color: #2980b9; font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: bold;">${item.sizes || ''}</p>
-                        <div class="price">${item.price} ج.م</div>
-                    </div>
-                `;
-
-                menuContainer.appendChild(card);
+                if (!categories[item.category]) {
+                    categories[item.category] = [];
+                }
+                categories[item.category].push(item);
             });
+
+            // بناء العرض لكل قسم
+            for (const [categoryName, items] of Object.entries(categories)) {
+                const categorySection = document.createElement("section");
+                categorySection.className = "menu-category";
+
+                const categoryTitle = document.createElement("h2");
+                categoryTitle.className = "category-title";
+                categoryTitle.textContent = categoryName;
+                categorySection.appendChild(categoryTitle);
+
+                const itemsGrid = document.createElement("div");
+                itemsGrid.className = "items-grid";
+
+                items.forEach(dish => {
+                    const card = document.createElement("div");
+                    card.className = "dish-card";
+
+                    card.innerHTML = `
+                        <img src="${dish.image}" alt="${dish.name}" loading="lazy">
+                        <div class="dish-info">
+                            <h3>${dish.name}</h3>
+                            <p class="description">${dish.description || ''}</p>
+                            <p class="sizes"><strong>الأحجام:</strong> ${dish.sizes}</p>
+                            <div class="price-tag">${dish.price} ج.م</div>
+                        </div>
+                    `;
+                    itemsGrid.appendChild(card);
+                });
+
+                categorySection.appendChild(itemsGrid);
+                menuContainer.appendChild(categorySection);
+            }
         })
-        .catch(error => {
-            console.error("خطأ:", error);
-            menuContainer.innerHTML = `<p style="text-align: center; color: red; grid-column: 1/-1;">عذراً، حدث خطأ أثناء تحميل المنيو. تأكد من صحة الرابط.</p>`;
-        });
+        .catch(error => console.error("خطأ في تحميل بيانات المنيو:", error));
 });
