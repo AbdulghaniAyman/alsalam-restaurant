@@ -28,7 +28,6 @@ body {
     flex-direction: column;
 }
 
-/* تنسيق الهيدر القديم مع اللوجو والنص الداعم */
 .main-header {
     background: linear-gradient(135deg, #1e272e, #2f3542);
     color: white;
@@ -61,7 +60,6 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* شريط الأقسام الأفقي العلوي */
 .categories-bar-wrapper {
     background: #18202c;
     padding: 15px 10px;
@@ -105,7 +103,6 @@ body {
     font-weight: 700;
 }
 
-/* شبكة الأصناف */
 .container {
     padding: 20px 15px;
     flex: 1;
@@ -163,7 +160,6 @@ body {
     font-weight: 600;
 }
 
-/* النافذة المنبثقة (Modal) لاختيار الأحجام */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -257,11 +253,12 @@ body {
     color: var(--text-muted);
     text-align: center;
     margin-bottom: 20px;
+    line-height: 1.5;
 }
 
 .sizes-container {
     display: flex;
-    gap: 10px;
+    gap: 8px;
     justify-content: center;
     margin-bottom: 20px;
     flex-wrap: wrap;
@@ -272,9 +269,9 @@ body {
     background: transparent;
     color: var(--text-muted);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 8px 25px;
+    padding: 8px 18px;
     border-radius: 50px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -323,7 +320,6 @@ body {
     transform: scale(0.98);
 }
 
-/* تنسيق التذييل القديم (Footer) */
 .site-footer {
     background: #1e272e;
     color: #ffffff;
@@ -392,4 +388,4 @@ body {
     text-decoration: none;
     direction: ltr;
     display: inline-block;
-}
+    }
