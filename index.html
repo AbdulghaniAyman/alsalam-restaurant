@@ -5,30 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مطعم السلام - القائمة الرئيسية</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="restaurant-header">
-        <div class="header-content">
-            <h1>مطعم السلام</h1>
-            <p class="tagline">أشهى المشويات، الكباب، الشاورما، والأكلات الشرقية</p>
-            <div class="restaurant-info">
-                <p>📍 <strong>العنوان:</strong> مدينة السادات - السوق التجاري - المنطقة الرابعة</p>
-                <p>📞 <strong>للاتصال والطلب:</strong> 0100638288 - 01006646943</p>
+    <!-- شاشة الأقسام الرئيسية (البداية) -->
+    <div id="categories-view" class="view active-view">
+        <header class="main-header">
+            <div class="logo-container">
+                <h1>مطعم السلام</h1>
+                <p>أصالة المذاق المصري والعربي</p>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <main class="container">
-        <div id="menu-container">
-            <!-- سيتم تعبئة الأقسام والأطباق ديناميكياً من ملف JavaScript -->
-        </div>
-    </main>
+        <main class="container">
+            <h2 class="section-title">اختر القسم</h2>
+            <div id="categories-grid" class="categories-grid">
+                <!-- سيتم تعبئتها ديناميكياً بواسطة JavaScript -->
+            </div>
+        </main>
+    </div>
 
-    <footer>
-        <p>جميع حقوق الطبع والنشر محفوطة © 2026 - مطعم السلام</p>
-    </footer>
+    <!-- شاشة عرض الأصناف داخل القسم (بنمط iOS) -->
+    <div id="items-view" class="view">
+        <header class="items-header">
+            <button id="back-btn" class="back-btn">
+                <i class="fa-solid fa-chevron-right"></i> الرئيسية
+            </button>
+            <h2 id="current-category-title">اسم القسم</h2>
+            <div style="width: 60px;"></div> <!-- لضمان التوازن البصري -->
+        </header>
+
+        <main class="container">
+            <div id="items-grid" class="items-grid">
+                <!-- سيتم تعبئتها ديناميكياً بواسطة JavaScript -->
+            </div>
+        </main>
+    </div>
 
     <script src="script.js"></script>
 </body>
