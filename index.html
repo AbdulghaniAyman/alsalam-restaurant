@@ -10,14 +10,24 @@
 </head>
 <body>
 
-   <!-- شاشة الأقسام الرئيسية (البداية) -->
+  <!-- شاشة الأقسام الرئيسية (البداية) -->
 <div id="categories-view" class="view active-view">
     <header class="main-header">
         <div class="logo-container">
-            <!-- استبدال النص بصورة اللوجو -->
-            <img src="logo.png" alt="مطعم السلام" class="brand-logo">
+            <!-- استخدام ملف SVG -->
+            <img src="logo.svg" alt="مطعم السلام" class="brand-logo">
             <p>أصالة المذاق المصري والعربي</p>
         </div>
+    </header>
+
+    <main class="container">
+        <h2 class="section-title">اختر القسم</h2>
+        <div id="categories-grid" class="categories-grid">
+            <!-- سيتم تعبئتها ديناميكياً بواسطة JavaScript -->
+        </div>
+    </main>
+</div>
+    
     </header>
 
     <main class="container">
