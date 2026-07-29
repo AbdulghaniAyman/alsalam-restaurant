@@ -1,53 +1,93 @@
-const jsonUrl = "https://raw.githubusercontent.com/AbdulghaniAyman/alsalam-restaurant/refs/heads/main/data.json";
+document.addEventListener('DOMContentLoaded', () => {
+    let menuData = [];
 
-document.addEventListener("DOMContentLoaded", () => {
-    fetch(jsonUrl)
+    const categoriesView = document.getElementById('categories-view');
+    const itemsView = document.getElementById('items-view');
+    const categoriesGrid = document.getElementById('categories-grid');
+    const itemsGrid = document.getElementById('items-grid');
+    const currentCategoryTitle = document.getElementById('current-category-title');
+    const backBtn = document.getElementById('back-btn');
+
+    // جلب بيانات ملف data.json
+    fetch('data.json')
         .then(response => response.json())
         .then(data => {
-            const menuContainer = document.getElementById("menu-container");
-            menuContainer.innerHTML = "";
+            menuData = data;
+            initCategories();
+        })
+        .catch(error => console.error('Error loading menu data:', error));
 
-            // تجميع الأطباق حسب الأقسام
-            const categories = {};
-            data.forEach(item => {
-                if (!categories[item.category]) {
-                    categories[item.category] = [];
-                }
-                categories[item.category].push(item);
+    // تجميع الأقسام وعرضها في الصفحة الرئيسية
+    function initCategories() {
+        categoriesGrid.innerHTML = '';
+        
+        // استخراج الأقسام الفريدة مع أخذ أول صورة لكل قسم كصورة تعبيرية
+        const categoriesMap = {};
+        menuData.forEach(item => {
+            if (!categoriesMap[item.category]) {
+                categoriesMap[item.category] = item.image;
+            }
+        });
+
+        Object.keys(categoriesMap).forEach(categoryName => {
+            const card = document.createElement('div');
+            card.className = 'category-card';
+            card.innerHTML = `
+                <div class="category-img-container">
+                    <img src="${categoriesMap[categoryName]}" alt="${categoryName}" loading="lazy">
+                </div>
+                <div class="category-info">
+                    <h3>${categoryName}</h3>
+                </div>
+            `;
+
+            card.addEventListener('click', () => {
+                openCategoryItems(categoryName);
             });
 
-            // بناء العرض لكل قسم
-            for (const [categoryName, items] of Object.entries(categories)) {
-                const categorySection = document.createElement("section");
-                categorySection.className = "menu-category";
+            categoriesGrid.appendChild(card);
+        });
+    }
 
-                const categoryTitle = document.createElement("h2");
-                categoryTitle.className = "category-title";
-                categoryTitle.textContent = categoryName;
-                categorySection.appendChild(categoryTitle);
+    // فتح شاشة الأصناف الخاصة بالقسم المحدد مع تأثير iOS الانسيابي
+    function openCategoryItems(categoryName) {
+        currentCategoryTitle.textContent = categoryName;
+        itemsGrid.innerHTML = '';
 
-                const itemsGrid = document.createElement("div");
-                itemsGrid.className = "items-grid";
+        const filteredItems = menuData.filter(item => item.category === categoryName);
 
-                items.forEach(dish => {
-                    const card = document.createElement("div");
-                    card.className = "dish-card";
+        filteredItems.forEach((item, index) => {
+            const itemCard = document.createElement('div');
+            itemCard.className = 'item-card';
+            // تأخير زمني تدريجي لكل كارد لعمل أنيميشن متناسق (Staggered animation)
+            itemCard.style.animationDelay = `${index * 0.05}s`;
 
-                    card.innerHTML = `
-                        <img src="${dish.image}" alt="${dish.name}" loading="lazy">
-                        <div class="dish-info">
-                            <h3>${dish.name}</h3>
-                            <p class="description">${dish.description || ''}</p>
-                            <p class="sizes"><strong>الأحجام:</strong> ${dish.sizes}</p>
-                            <div class="price-tag">${dish.price} ج.م</div>
-                        </div>
-                    `;
-                    itemsGrid.appendChild(card);
-                });
+            itemCard.innerHTML = `
+                <img src="${item.image}" alt="${item.name}" class="item-img" loading="lazy">
+                <div class="item-details">
+                    <div>
+                        <h4 class="item-title">${item.name}</h4>
+                        <p class="item-desc">${item.description || ''}</p>
+                    </div>
+                    <div class="item-footer">
+                        <span class="item-price">${item.price} ج.م</span>
+                        ${item.sizes ? `<span class="item-sizes">${item.sizes}</span>` : ''}
+                    </div>
+                </div>
+            `;
+            itemsGrid.appendChild(itemCard);
+        });
 
-                categorySection.appendChild(itemsGrid);
-                menuContainer.appendChild(categorySection);
-            }
-        })
-        .catch(error => console.error("خطأ في تحميل بيانات المنيو:", error));
+        // التبديل بين الشاشات بانسيابية
+        categoriesView.classList.remove('active-view');
+        itemsView.classList.add('active-view');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // زر العودة إلى القائمة الرئيسية
+    backBtn.addEventListener('click', () => {
+        itemsView.classList.remove('active-view');
+        categoriesView.classList.add('active-view');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 });
