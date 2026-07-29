@@ -250,3 +250,42 @@ body {
     padding: 3px 8px;
     border-radius: 6px;
 }
+
+/* تنسيق هيدر اللوجو الجديد */
+.main-header {
+    background: linear-gradient(135deg, #1e272e, #2f3542);
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    margin-bottom: 30px;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-logo {
+    width: 140px; /* يمكنك تعديل الحجم حسب الرغبة */
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease;
+}
+
+.brand-logo:hover {
+    transform: scale(1.05);
+}
+
+.logo-container p {
+    font-size: 0.95rem;
+    color: #a4b0be;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
