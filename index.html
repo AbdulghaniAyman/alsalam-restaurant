@@ -10,23 +10,56 @@
 </head>
 <body>
 
-    <!-- شاشة الأقسام الرئيسية (البداية) -->
-    <div id="categories-view" class="view active-view">
+    <div class="app-container">
+        <!-- هيدر اللوجو (نفس تصميمك السابق) -->
         <header class="main-header">
             <div class="logo-container">
-                <img src="logo.svg" alt="مطعم السلام" class="brand-logo">
+                <img src="logo.svg" alt="مطعم السلام" class="brand-logo" onerror="this.src='logo.png'">
                 <p>أصالة المذاق المصري والعربي</p>
             </div>
         </header>
 
+        <!-- شريط الأقسام الأفقي العلوي الجديد -->
+        <nav class="categories-bar-wrapper">
+            <div id="categories-bar" class="categories-bar">
+                <!-- يتم تعبئتها عبر الجافاسكريبت -->
+            </div>
+        </nav>
+
+        <!-- شبكة عرض الأصناف -->
         <main class="container">
-            <h2 class="section-title">اختر القسم</h2>
-            <div id="categories-grid" class="categories-grid">
-                <!-- سيتم تعبئتها ديناميكياً بواسطة JavaScript -->
+            <div id="items-grid" class="items-grid">
+                <!-- يتم تعبئتها عبر الجافاسكريبت -->
             </div>
         </main>
 
-        <!-- التذييل ومعلومات التواصل (Footer) -->
+        <!-- نافذة تفاصيل الصنف واختيار الأحجام (Modal) -->
+        <div id="item-modal" class="modal-overlay">
+            <div class="modal-content">
+                <button class="close-modal" id="close-modal-btn"><i class="fa-solid fa-xmark"></i></button>
+                <div class="modal-img-container">
+                    <img id="modal-img" src="" alt="صنف الطعام">
+                </div>
+                <h3 id="modal-title">اسم الصنف</h3>
+                <p id="modal-desc">وصف الصنف</p>
+                
+                <!-- أزرار اختيار الأحجام -->
+                <div id="modal-sizes-container" class="sizes-container">
+                    <!-- يتم توليد الأحجام هنا -->
+                </div>
+
+                <!-- السعر المتغير -->
+                <div class="modal-price-box">
+                    <span id="modal-price">0</span> <span class="currency">جنيه</span>
+                </div>
+
+                <button class="order-now-btn" id="order-now-btn">
+                    اطلب الآن <i class="fa-solid fa-fire"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- معلومات التواصل والعنوان ورقم المطور (كما هي تماماً) -->
         <footer class="site-footer">
             <div class="footer-content">
                 <div class="footer-section">
@@ -46,23 +79,6 @@
                 تصميم وتطوير الواجهة البرمجية: <a href="tel:01020867958" class="designer-phone">01020867958</a>
             </div>
         </footer>
-    </div>
-
-    <!-- شاشة عرض الأصناف داخل القسم (بنمط iOS) -->
-    <div id="items-view" class="view">
-        <header class="items-header">
-            <button id="back-btn" class="back-btn">
-                <i class="fa-solid fa-chevron-right"></i> الرئيسية
-            </button>
-            <h2 id="current-category-title">اسم القسم</h2>
-            <div style="width: 60px;"></div> <!-- لضمان التوازن البصري -->
-        </header>
-
-        <main class="container">
-            <div id="items-grid" class="items-grid">
-                <!-- سيتم تعبئتها ديناميكياً بواسطة JavaScript -->
-            </div>
-        </main>
     </div>
 
     <script src="script.js"></script>
