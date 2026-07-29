@@ -263,3 +263,74 @@ body {
 .brand-logo:hover {
     transform: scale(1.06);
 }
+
+/* تنسيق تذييل الصفحة (Footer) ومعلومات التواصل */
+.site-footer {
+    background: #1e272e;
+    color: #ffffff;
+    padding: 30px 20px 15px 20px;
+    margin-top: 50px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-section h3 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.footer-section p, .footer-section a {
+    color: #a4b0be;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.phones {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    align-items: center;
+    direction: ltr; /* لترتيب الأرقام بشكل صحيح */
+}
+
+.phones a {
+    color: #fff;
+    font-weight: 700;
+}
+
+.phones a:hover, .designer-phone:hover {
+    color: var(--primary-color);
+}
+
+.designer-credits {
+    text-align: center;
+    padding-top: 15px;
+    font-size: 0.85rem;
+    color: #747d8c;
+}
+
+.designer-credits a {
+    color: #ff4757;
+    font-weight: 700;
+    text-decoration: none;
+    direction: ltr;
+    display: inline-block;
+}
