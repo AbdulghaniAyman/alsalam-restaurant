@@ -1,4 +1,4 @@
-// قائمة الأصناف الكاملة والمحدثة بدقة حسب طلبك
+// قائمة الأصناف الكاملة والمحدثة بدقة
 const menuData = [
     // القسم الأول: فراخ السلام
     {
@@ -653,7 +653,7 @@ const menuData = [
         description: "فرد حمام محشي أرز أو فريك",
         image: "item61.jpg",
         sizes: [
-            { name: "كيلو", price: 195 }
+            { name: "فرد", price: 195 }
         ]
     },
 
@@ -785,4 +785,5 @@ const menuData = [
         description: "شوربة لسان عصفور ساخنة ودافئة",
         image: "item74.jpg",
         sizes: [
-            { name: "طبق", pric
+            { name: "طبق", price: 20 }
+  
