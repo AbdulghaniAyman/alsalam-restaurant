@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     // رابط الـ Raw الخاص بك الذي أرسلته للتو
-    const jsonUrl = "https://raw.githubusercontent.com/Abdulghani010/my-catalog/refs/heads/main/data.json";
-
+const jsonUrl = "https://raw.githubusercontent.com/AbdulghaniAyman/alsalam-restaurant/refs/heads/main/data.json";
+    
     const menuContainer = document.getElementById("menu-container");
 
     fetch(jsonUrl)
