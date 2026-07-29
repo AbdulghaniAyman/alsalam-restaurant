@@ -5,86 +5,710 @@
     "description": "فراخ مشوية على الطريقة الكلاسيكية",
     "sizes": "فرخة: 360 ج.م | نص: 180 ج.م | ربع: 90 ج.م",
     "price": "360",
-    "image": "https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=500"
+    "image": "https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=1000&q=80"
   },
   {
     "category": "فراخ السلام",
-    "name": "فراخ مشوية على الفحم",
+    "name": "فراخ مشوية علي الفحم",
     "description": "فراخ طازجة مشوية على الفحم بأكهل التتبيلات",
     "sizes": "فرخة: 360 ج.م | نص: 180 ج.م | ربع: 90 ج.م",
     "price": "360",
-    "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=500"
+    "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1000&q=80"
   },
   {
     "category": "فراخ السلام",
-    "name": "فراخ شيش / شيش طاووق",
-    "description": "سيخ شيش طاووق مخل ومرتب",
-    "sizes": "فرخة: 460 ج.م | نص: 230 ج.م | ربع: 110 ج.م",
+    "name": "فراخ شيش",
+    "description": "فراخ شيش مخلية ومتبلة",
+    "sizes": "فرخة: 360 ج.م | نص: 180 ج.م | ربع: 90 ج.م",
+    "price": "360",
+    "image": "https://images.unsplash.com/photo-1603048588665-791ca8aea617?w=1000&q=80"
+  },
+  {
+    "category": "فراخ السلام",
+    "name": "فراخ شيش طاووق",
+    "description": "سيخ شيش طاووق طري ومتبل",
+    "sizes": "فرخة: 460 ج.م | نص: 230 ج.م | ربع: 115 ج.م",
     "price": "460",
-    "image": "https://images.unsplash.com/photo-1603048588665-791ca8aea617?w=500"
+    "image": "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=1000&q=80"
+  },
+  {
+    "category": "فراخ السلام",
+    "name": "فراخ بانية",
+    "description": "قطع فراخ بانية مقرمشة",
+    "sizes": "فرخة: 460 ج.م | نص: 230 ج.م | ربع: 115 ج.م",
+    "price": "460",
+    "image": "https://images.unsplash.com/photo-1562967914-608f82629710?w=1000&q=80"
+  },
+  {
+    "category": "فراخ السلام",
+    "name": "فراخة محشية",
+    "description": "فرخة محشية بالأرز أو الفريكة",
+    "sizes": "فرخة: 460 ج.م | نص: 230 ج.م | ربع: 115 ج.م",
+    "price": "460",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=1000&q=80"
+  },
+  {
+    "category": "صواني السلام",
+    "name": "صنية السلام",
+    "description": "كيلوا كفتة + فرخة ونصف شيش + 3 ربع كباب + ربع طرب + 3 معمر + 2 ملوخيه",
+    "sizes": "حجم عائلي كبير جداً",
+    "price": "2400",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=1000&q=80"
+  },
+  {
+    "category": "صواني السلام",
+    "name": "صنيه العيلة",
+    "description": "نص كفته + فرخه شيش + ثلث كباب + ربع طرب + 2 معمر + 2 ملوخيه",
+    "sizes": "تكفي العائلة",
+    "price": "1450",
+    "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1000&q=80"
+  },
+  {
+    "category": "صواني السلام",
+    "name": "صنيه الصحاب",
+    "description": "نص فرخه + نص كفته + نص كباب + ربع طرب + ربع شيش + 2 معمر + 2 ملوخيه",
+    "sizes": "تجمع الأصحاب",
+    "price": "1450",
+    "image": "https://images.unsplash.com/photo-1603048588665-791ca8aea617?w=1000&q=80"
+  },
+  {
+    "category": "صواني السلام",
+    "name": "صينيه 999",
+    "description": "نص فرخه + ربع كفته + ربع كباب + ربع طرب + 3 معمر او بسمتي + 1 ملوخيه",
+    "sizes": "عرض خاص",
+    "price": "999",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=1000&q=80"
+  },
+  {
+    "category": "المشروبات",
+    "name": "مياه معدنيه صغيره",
+    "description": "زجاجة مياه نقية صغيرة",
+    "sizes": "صغير",
+    "price": "10",
+    "image": "https://images.unsplash.com/photo-1548839140-29a749e1bc4c?w=1000&q=80"
+  },
+  {
+    "category": "المشروبات",
+    "name": "مياه معدنيه كبيره",
+    "description": "زجاجة مياه نقية كبيرة",
+    "sizes": "كبير",
+    "price": "15",
+    "image": "https://images.unsplash.com/photo-1548839140-29a749e1bc4c?w=1000&q=80"
+  },
+  {
+    "category": "المشروبات",
+    "name": "كانز بيبسي",
+    "description": "مشروب غازي منعش",
+    "sizes": "كانز",
+    "price": "25",
+    "image": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=1000&q=80"
+  },
+  {
+    "category": "المشروبات",
+    "name": "لتر بيبسي",
+    "description": "زجاجة بيبسي لتر",
+    "sizes": "1 لتر",
+    "price": "45",
+    "image": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=1000&q=80"
+  },
+  {
+    "category": "المشروبات",
+    "name": "2 لتر بيبسي",
+    "description": "زجاجة بيبسي عائلية 2 لتر",
+    "sizes": "2 لتر",
+    "price": "55",
+    "image": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=1000&q=80"
   },
   {
     "category": "كريب السلام",
     "name": "كريب بطاطس",
-    "description": "كريب محشو بطاطس مقرمشة",
+    "description": "كريب مقرمش بالبطاطس والصوص",
     "sizes": "قياسي",
     "price": "70",
-    "image": "https://images.unsplash.com/photo-1551782450-17144efb9c50?w=500"
+    "image": "https://images.unsplash.com/photo-1551782450-17144efb9c50?w=1000&q=80"
   },
   {
     "category": "كريب السلام",
-    "name": "كريب زنگر",
-    "description": "قطع دجاج زنجر حارة مقرمشة مع الصوص",
-    "sizes": "قياسي",
-    "price": "110",
-    "image": "https://images.unsplash.com/photo-1626803775151-61d756612f97?w=500"
-  },
-  {
-    "category": "شاورما السلام",
-    "name": "فتة شاورما فراخ",
-    "description": "شاورما فراخ + بسمتي + بطاطس + مخلل + ثومية",
+    "name": "كريب برجر",
+    "description": "كريب محشو قطع البرجر اللذيذة",
     "sizes": "قياسي",
     "price": "100",
-    "image": "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=500"
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1000&q=80"
   },
   {
-    "category": "سندوتش السلام",
-    "name": "سندوتش شاورما فراخ",
-    "description": "بلدي / فينو / صاج",
-    "sizes": "صغير: 90 ج.م | وسط: 100 ج.م | كبير: 80 ج.م",
+    "category": "كريب السلام",
+    "name": "كريب موزاريلا",
+    "description": "مزيج الأجبان الذائبة",
+    "sizes": "قياسي",
+    "price": "80",
+    "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=1000&q=80"
+  },
+  {
+    "category": "كريب السلام",
+    "name": "كريب كرسبي بطاطس",
+    "description": "دجاج كرسبي مع بطاطس مقرمشة",
+    "sizes": "قياسي",
     "price": "90",
-    "image": "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=500"
+    "image": "https://images.unsplash.com/photo-1626803775151-61d756612f97?w=1000&q=80"
+  },
+  {
+    "category": "كريب السلام",
+    "name": "كريب كرسبي",
+    "description": "قطع دجاج كرسبي حارة ومقرمشة",
+    "sizes": "قياسي",
+    "price": "110",
+    "image": "https://images.unsplash.com/photo-1626803775151-61d756612f97?w=1000&q=80"
+  },
+  {
+    "category": "كريب السلام",
+    "name": "كريب زنجر",
+    "description": "زنجر حار مقرمش مع الصوص الخاص",
+    "sizes": "قياسي",
+    "price": "110",
+    "image": "https://images.unsplash.com/photo-1626803775151-61d756612f97?w=1000&q=80"
+  },
+  {
+    "category": "كريب السلام",
+    "name": "كريب فاهيتا",
+    "description": "فاهيتا دجاج مع الفلفل والخضار",
+    "sizes": "قياسي",
+    "price": "130",
+    "image": "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=1000&q=80"
+  },
+  {
+    "category": "كريب السلام",
+    "name": "كريب شيش",
+    "description": "قطع شيش طاووق طرية ومتبلة",
+    "sizes": "قياسي",
+    "price": "120",
+    "image": "https://images.unsplash.com/photo-1603048588665-791ca8aea617?w=1000&q=80"
+  },
+  {
+    "category": "كريب السلام",
+    "name": "سوبر كرانشي",
+    "description": "كرانشي مضاعف ولذيذ",
+    "sizes": "قياسي",
+    "price": "130",
+    "image": "https://images.unsplash.com/photo-1626803775151-61d756612f97?w=1000&q=80"
+  },
+  {
+    "category": "كريب السلام",
+    "name": "شاورما فراخ",
+    "description": "شاورما فراخ سورية في الكريب",
+    "sizes": "قياسي",
+    "price": "120",
+    "image": "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=1000&q=80"
+  },
+  {
+    "category": "كريب السلام",
+    "name": "ميكس فراخ",
+    "description": "تشكيلة من لحوم الدجاج الفاخرة",
+    "sizes": "قياسي",
+    "price": "130",
+    "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1000&q=80"
+  },
+  {
+    "category": "كريب السلام",
+    "name": "كفته",
+    "description": "كفتة مشوية على الفحم داخل الكريب",
+    "sizes": "قياسي",
+    "price": "120",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=1000&q=80"
+  },
+  {
+    "category": "كريب السلام",
+    "name": "نوتيلا",
+    "description": "كريب شوكولاتة نوتيلا حلو",
+    "sizes": "قياسي",
+    "price": "60",
+    "image": "https://images.unsplash.com/photo-1519869325930-281384150729?w=1000&q=80"
+  },
+  {
+    "category": "كريب السلام",
+    "name": "كريب سجق",
+    "description": "سجق شرقي محمش",
+    "sizes": "قياسي",
+    "price": "115",
+    "image": "https://images.unsplash.com/photo-1551782450-17144efb9c50?w=1000&q=80"
+  },
+  {
+    "category": "كريب السلام",
+    "name": "ميكس جبن",
+    "description": "تشكيلة أجبان غنية",
+    "sizes": "قياسي",
+    "price": "100",
+    "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=1000&q=80"
+  },
+  {
+    "category": "كريب السلام",
+    "name": "كريب السلام",
+    "description": "التشكيلة الملكية الخاصة بالمطعم",
+    "sizes": "قياسي",
+    "price": "140",
+    "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1000&q=80"
+  },
+  {
+    "category": "كريب السلام",
+    "name": "كريب كبده",
+    "description": "كبدة اسكندراني طازجة في الكريب",
+    "sizes": "قياسي",
+    "price": "90",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=1000&q=80"
+  },
+  {
+    "category": "كريب السلام",
+    "name": "كريب ستربس",
+    "description": "ستربس دجاج مقرمش",
+    "sizes": "قياسي",
+    "price": "110",
+    "image": "https://images.unsplash.com/photo-1626803775151-61d756612f97?w=1000&q=80"
+  },
+  {
+    "category": "الإضافات",
+    "name": "موتزاريلا",
+    "description": "إضافة جبنة موتزاريلا",
+    "sizes": "إضافي",
+    "price": "20",
+    "image": "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=1000&q=80"
+  },
+  {
+    "category": "الإضافات",
+    "name": "بطاطس",
+    "description": "إضافة بطاطس مقلية",
+    "sizes": "إضافي",
+    "price": "20",
+    "image": "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=1000&q=80"
+  },
+  {
+    "category": "الإضافات",
+    "name": "طبق بطاطس",
+    "description": "طبق بطاطس مقلية كبير",
+    "sizes": "طبق",
+    "price": "35",
+    "image": "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=1000&q=80"
   },
   {
     "category": "وجبات السلام",
-    "name": "وجبة فراخ مع أرز",
-    "description": "ربع فراخ شيش أو تكا + أرز بشعرية وعيش وطحينة ومخلل",
-    "sizes": "قياسي",
+    "name": "وجبه فراخ مع ارز",
+    "description": "ربع فراخ شيش او تكه ورز شعريه وعيش وطحينه ومخلل",
+    "sizes": "ربع فرخة",
     "price": "120",
-    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=500"
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=1000&q=80"
+  },
+  {
+    "category": "وجبات السلام",
+    "name": "وجبه ربع فراخ على الفحم",
+    "description": "ربع فراخ شيش او تكه وارز بشعريه وخضار",
+    "sizes": "ربع فرخة",
+    "price": "145",
+    "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1000&q=80"
+  },
+  {
+    "category": "وجبات السلام",
+    "name": "وجبه ربع فراخ شوايه",
+    "description": "ربع فراخ شوايه ورز شعريه وخضار مشكل وعيش وطحينه ومخلل",
+    "sizes": "ربع فرخة",
+    "price": "145",
+    "image": "https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=1000&q=80"
+  },
+  {
+    "category": "وجبات السلام",
+    "name": "وجبه نص فراخ",
+    "description": "نص فراخ شيش او تكه ارز بشعريه وخضار وعيش وطحينه ومخلل",
+    "sizes": "نصف فرخة",
+    "price": "235",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=1000&q=80"
+  },
+  {
+    "category": "وجبات السلام",
+    "name": "وجبه السلام",
+    "description": "ربع فراخ وثمن كفته ورز بسمتي ويعيش وطحينه ومخلل",
+    "sizes": "وجبة خاصة",
+    "price": "200",
+    "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1000&q=80"
+  },
+  {
+    "category": "وجبات السلام",
+    "name": "وجبه ميكس",
+    "description": "ربع فراخ واثنين صابع كفته واثنين صابع طرب وقطعه كباب ورز بسمتي بوم فريت عيش وطحينه ومخلل",
+    "sizes": "وجبة مشكلة",
+    "price": "400",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=1000&q=80"
+  },
+  {
+    "category": "وجبات السلام",
+    "name": "وجبه الشباب",
+    "description": "ربع مشوي وراك وارز بسمتي وبطاطس وعيش ومخلل وطحينه",
+    "sizes": "وجبة الشباب",
+    "price": "135",
+    "image": "https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=1000&q=80"
+  },
+  {
+    "category": "وجبات السلام",
+    "name": "وجبه كرسبي",
+    "description": "ثلاث قطع كرسبي وبسمتي وبطاطس وتوميه وعيش ومخلل",
+    "sizes": "3 قطع",
+    "price": "175",
+    "image": "https://images.unsplash.com/photo-1626803775151-61d756612f97?w=1000&q=80"
+  },
+  {
+    "category": "وجبات السلام",
+    "name": "وجبه حمام",
+    "description": "فرد حمام وثمن كفته وربع فرخه وارز شعريه وبطاطس وعيش وطحينه ومخلل",
+    "sizes": "وجبة مميزة",
+    "price": "395",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=1000&q=80"
   },
   {
     "category": "مكرونات السلام",
-    "name": "مكرونة بالفراخ",
-    "description": "مكرونة بصوص الطماطم أو الأبيض مع قطع الفراخ",
-    "sizes": "قياسي",
+    "name": "مكرونه بالفراخ",
+    "description": "مكرونة بصوص المذاق الشهي مع قطع الفراخ",
+    "sizes": "طبق",
     "price": "60",
-    "image": "https://images.unsplash.com/photo-1621996346565-e3d5d6281297?w=500"
+    "image": "https://images.unsplash.com/photo-1621996346565-e3d5d6281297?w=1000&q=80"
   },
   {
-    "category": "مشروبات",
-    "name": "مياه معدنية صغير",
-    "description": "زجاجة مياه نقية",
-    "sizes": "صغير",
-    "price": "10",
-    "image": "https://images.unsplash.com/photo-1548839140-29a749e1bc4c?w=500"
+    "category": "مكرونات السلام",
+    "name": "مكرونه بالكبده",
+    "description": "مكرونة بالكبدة الإسكندراني",
+    "sizes": "طبق",
+    "price": "60",
+    "image": "https://images.unsplash.com/photo-1621996346565-e3d5d6281297?w=1000&q=80"
   },
   {
-    "category": "إضافات",
-    "name": "موتزاريلا",
-    "description": "إضافة جبنة موتزاريلا إضافية",
-    "sizes": "إضافي",
+    "category": "مكرونات السلام",
+    "name": "مكرونه باللحمه",
+    "description": "مكرونة بقطع اللحم المفروم أو اللحم الصغير",
+    "sizes": "طبق",
+    "price": "60",
+    "image": "https://images.unsplash.com/photo-1621996346565-e3d5d6281297?w=1000&q=80"
+  },
+  {
+    "category": "مكرونات السلام",
+    "name": "مكرونه بشاميل",
+    "description": "طاجن مكرونة بشاميل باللحمة المفرومة",
+    "sizes": "قطعة / طاجن",
+    "price": "70",
+    "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=1000&q=80"
+  },
+  {
+    "category": "مكرونات السلام",
+    "name": "مكرونه نجرسكو",
+    "description": "مكرونة نجرسكو بالفراخ والبشاميل والموتزاريلا",
+    "sizes": "طاجن",
+    "price": "70",
+    "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=1000&q=80"
+  },
+  {
+    "category": "كبابجي السلام",
+    "name": "كباب ضاني",
+    "description": "لحم ضاني مشوي على الفحم طازج",
+    "sizes": "كيلو: 1200 | نص: 600 | ثلث: 400 | ربع: 300 ج.م",
+    "price": "1200",
+    "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1000&q=80"
+  },
+  {
+    "category": "كبابجي السلام",
+    "name": "ريش ضاني",
+    "description": "ريش ضاني مشوية طرية",
+    "sizes": "كيلو: 1300 | نص: 650 | ثلث: 450 ج.م",
+    "price": "1300",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=1000&q=80"
+  },
+  {
+    "category": "كبابجي السلام",
+    "name": "مشكل كباب وكفته",
+    "description": "تشكيلة مشاوي فاخرة كباب وكفتة",
+    "sizes": "كيلو: 850 | نص: 425 | ثلث: 285 | ربع: 215 ج.م",
+    "price": "850",
+    "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1000&q=80"
+  },
+  {
+    "category": "كبابجي السلام",
+    "name": "طرب ضاني",
+    "description": "طرب ضاني مشوي على الفحم",
+    "sizes": "كيلو: 950 | نص: 475 | ثلث: 320 | ربع: 240 ج.م",
+    "price": "950",
+    "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1000&q=80"
+  },
+  {
+    "category": "كبابجي السلام",
+    "name": "كفته كندوز",
+    "description": "كفتة بلدي مشوية أصلي",
+    "sizes": "كيلو: 520 | نص: 260 | ثلث: 195 | ربع: 130 ج.م",
+    "price": "520",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=1000&q=80"
+  },
+  {
+    "category": "كبابجي السلام",
+    "name": "كبده اسكندراني",
+    "description": "كبدة بالخلطة الإسكندراني الحارة",
+    "sizes": "كيلو: 340 | نص: 170 | ربع: 85 ج.م",
+    "price": "340",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=1000&q=80"
+  },
+  {
+    "category": "كبابجي السلام",
+    "name": "كباب بتلو",
+    "description": "كباب بتلو طري ومميز",
+    "sizes": "كيلو: 1100 | نص: 550 | ثلث: 370 | ربع: 275 ج.م",
+    "price": "1100",
+    "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1000&q=80"
+  },
+  {
+    "category": "كبابجي السلام",
+    "name": "موزه ضاني فحم",
+    "description": "موزة ضاني مشوية على الفحم",
+    "sizes": "كيلو: 600 ج.م",
+    "price": "600",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=1000&q=80"
+  },
+  {
+    "category": "كبابجي السلام",
+    "name": "موزه ضاني بالفته",
+    "description": "موزة ضاني مع فتة بالصلصة والخل والثوم",
+    "sizes": "كيلو: 650 ج.م",
+    "price": "650",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=1000&q=80"
+  },
+  {
+    "category": "كبابجي السلام",
+    "name": "موزه بتلو",
+    "description": "موزة بتلو طرية ومميزة",
+    "sizes": "كيلو: 550 ج.م",
+    "price": "550",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=1000&q=80"
+  },
+  {
+    "category": "كبابجي السلام",
+    "name": "فرد حمام محشي",
+    "description": "حمام محشي أرز أو فريكة ومحمر",
+    "sizes": "فرد واحد: 195 ج.م",
+    "price": "195",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=1000&q=80"
+  },
+  {
+    "category": "طبق السلام",
+    "name": "طاجن لحمه بالخضار مع ارز بالشعرية",
+    "description": "لحمة بلدي مع خضار طازج في طاجن بالفرن",
+    "sizes": "طاجن",
+    "price": "270",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=1000&q=80"
+  },
+  {
+    "category": "طبق السلام",
+    "name": "طاجن عكاوي مع ارز بالشعرية",
+    "description": "طاجن عكاوي أصلي بالبهارات الشرقية",
+    "sizes": "طاجن",
+    "price": "270",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=1000&q=80"
+  },
+  {
+    "category": "طبق السلام",
+    "name": "طاجن كباب حله مع رز",
+    "description": "كباب حلة بالبصل المحمل والبهارات",
+    "sizes": "طاجن",
+    "price": "270",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=1000&q=80"
+  },
+  {
+    "category": "طبق السلام",
+    "name": "ارز معمر بالكبده",
+    "description": "أرز معمر في الطاجن بالقشطة والكبدة",
+    "sizes": "طاجن",
+    "price": "80",
+    "image": "https://images.unsplash.com/photo-1621996346565-e3d5d6281297?w=1000&q=80"
+  },
+  {
+    "category": "طبق السلام",
+    "name": "ارز معمر",
+    "description": "أرز معمر بالفلاحي والقشطة",
+    "sizes": "طاجن",
+    "price": "50",
+    "image": "https://images.unsplash.com/photo-1621996346565-e3d5d6281297?w=1000&q=80"
+  },
+  {
+    "category": "طبق السلام",
+    "name": "ارز بسمتي",
+    "description": "أرز بسمتي مفلفل",
+    "sizes": "طبق",
+    "price": "45",
+    "image": "https://images.unsplash.com/photo-1621996346565-e3d5d6281297?w=1000&q=80"
+  },
+  {
+    "category": "طبق السلام",
+    "name": "ارز بسمتي بالكبده",
+    "description": "أرز بسمتي مزين بالكبدة والمكسرات",
+    "sizes": "طبق",
+    "price": "75",
+    "image": "https://images.unsplash.com/photo-1621996346565-e3d5d6281297?w=1000&q=80"
+  },
+  {
+    "category": "طبق السلام",
+    "name": "ارز شعرية",
+    "description": "أرز مصري بالشعرية المحمرة",
+    "sizes": "طبق",
+    "price": "30",
+    "image": "https://images.unsplash.com/photo-1621996346565-e3d5d6281297?w=1000&q=80"
+  },
+  {
+    "category": "طبق السلام",
+    "name": "ارز شعرية بالكبده",
+    "description": "أرز شعرية مع قطع الكبدة الشهية",
+    "sizes": "طبق",
+    "price": "60",
+    "image": "https://images.unsplash.com/photo-1621996346565-e3d5d6281297?w=1000&q=80"
+  },
+  {
+    "category": "طبق السلام",
+    "name": "خضار مشكل",
+    "description": "طاجن خضار مشكل بالصلصة",
+    "sizes": "طبق",
+    "price": "30",
+    "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=1000&q=80"
+  },
+  {
+    "category": "طبق السلام",
+    "name": "طبق فاصوليا",
+    "description": "فاصوليا بيضاء بالصلصة الطازجة",
+    "sizes": "طبق",
+    "price": "30",
+    "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=1000&q=80"
+  },
+  {
+    "category": "طبق السلام",
+    "name": "طبق ملوخيه",
+    "description": "ملوخية طازجة بالطشة المصرية",
+    "sizes": "طبق",
+    "price": "40",
+    "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=1000&q=80"
+  },
+  {
+    "category": "طبق السلام",
+    "name": "شوربه لسان عصفور",
+    "description": "شوربة لسان عصفور بالمرقة الفاخرة",
+    "sizes": "طبق",
     "price": "20",
-    "image": "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=500"
+    "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=1000&q=80"
+  },
+  {
+    "category": "شاورما السلام",
+    "name": "فته شاورما فراخ",
+    "description": "شاورما فراخ وبسمتي وبطاطس ومخلل وثومية",
+    "sizes": "كبير",
+    "price": "150",
+    "image": "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=1000&q=80"
+  },
+  {
+    "category": "شاورما السلام",
+    "name": "فته شاورما فراخ وسط",
+    "description": "فتة شاورما فراخ حجم وسط",
+    "sizes": "وسط",
+    "price": "90",
+    "image": "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=1000&q=80"
+  },
+  {
+    "category": "شاورما السلام",
+    "name": "وجبه شاورما فراخ",
+    "description": "ربع شاورما ويعيش وبطاطس ومخلل وتوميه",
+    "sizes": "وجبة",
+    "price": "160",
+    "image": "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=1000&q=80"
+  },
+  {
+    "category": "شاورما السلام",
+    "name": "وجبه شاورما عربي",
+    "description": "ساندوتش شاورما فراخ وبطاطس ومخلل وتوميه",
+    "sizes": "وجبة عربي",
+    "price": "120",
+    "image": "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=1000&q=80"
+  },
+  {
+    "category": "شاورما السلام",
+    "name": "وجبه شاورما عربي دبل",
+    "description": "عدد 2 ساندويتش شاورما فراخ وبطاطس ومخلل وتوميه",
+    "sizes": "دبل",
+    "price": "225",
+    "image": "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=1000&q=80"
+  },
+  {
+    "category": "ساندوتش السلام",
+    "name": "ساندوتش شاورما فراخ",
+    "description": "شاورما فراخ سورية لذيذة",
+    "sizes": "فينو: 90 | صغير: 55 | وسط: 70 | صاج: 85 ج.م",
+    "price": "90",
+    "image": "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=1000&q=80"
+  },
+  {
+    "category": "ساندوتش السلام",
+    "name": "ساندوتش كرسبي",
+    "description": "قطع دجاج كرسبي مقرمشة",
+    "sizes": "فينو: 80 | صاج: 90 ج.م",
+    "price": "80",
+    "image": "https://images.unsplash.com/photo-1626803775151-61d756612f97?w=1000&q=80"
+  },
+  {
+    "category": "ساندوتش السلام",
+    "name": "ساندوتش بوم فريت",
+    "description": "ساندوتش بطاطس مقلية مع الصوص",
+    "sizes": "فينو: 35 | صاج: 45 ج.م",
+    "price": "35",
+    "image": "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=1000&q=80"
+  },
+  {
+    "category": "ساندوتش السلام",
+    "name": "ساندوتش كفته",
+    "description": "كفتة مشوية طازجة في الخبز",
+    "sizes": "بلدي: 45 | فينو: 75 ج.م",
+    "price": "45",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=1000&q=80"
+  },
+  {
+    "category": "ساندوتش السلام",
+    "name": "ساندوتش كبده",
+    "description": "كبدة اسكندراني ساخنة",
+    "sizes": "بلدي: 35 | فينو: 55 | صاج: 70 ج.م",
+    "price": "35",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=1000&q=80"
+  },
+  {
+    "category": "ساندوتش السلام",
+    "name": "ساندوتش سجق",
+    "description": "سجق شرقي بخلطة مميزة",
+    "sizes": "بلدي: 45 | فينو: 60 ج.م",
+    "price": "45",
+    "image": "https://images.unsplash.com/photo-1551782450-17144efb9c50?w=1000&q=80"
+  },
+  {
+    "category": "ساندوتش السلام",
+    "name": "حواوشي",
+    "description": "حواوشي بلدي باللحمة المتبلة",
+    "sizes": "بلدي: 40 ج.م",
+    "price": "40",
+    "image": "https://images.unsplash.com/photo-1551782450-17144efb9c50?w=1000&q=80"
+  },
+  {
+    "category": "ساندوتش السلام",
+    "name": "شيش طاووق",
+    "description": "شيش طاووق متبل في الساندوتش",
+    "sizes": "فينو: 75 ج.م",
+    "price": "75",
+    "image": "https://images.unsplash.com/photo-1603048588665-791ca8aea617?w=1000&q=80"
+  },
+  {
+    "category": "ساندوتش السلام",
+    "name": "فراخ بانيه",
+    "description": "بانيه مقرمش في الساندوتش",
+    "sizes": "فينو: 75 ج.م",
+    "price": "75",
+    "image": "https://images.unsplash.com/photo-1562967914-608f82629710?w=1000&q=80"
+  },
+  {
+    "category": "ساندوتش السلام",
+    "name": "استربس",
+    "description": "استربس دجاج مقرمش",
+    "sizes": "فينو: 80 | صاج: 90 ج.م",
+    "price": "80",
+    "image": "https://images.unsplash.com/photo-1626803775151-61d756612f97?w=1000&q=80"
   }
 ]
