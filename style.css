@@ -119,7 +119,7 @@ body {
 
 .categories-bar {
     display: flex;
-    flex-wrap: wrap; /* السماح للأقسام بالنزول لسطر جديد بدلاً من الاختفاء في تمرير أفقي */
+    flex-wrap: wrap; /* يسمح للأقسام بالنزول لسطر جديد تلقائياً بدلاً من الاختفاء في التمرير الأفقي */
     gap: 10px;
     padding: 5px;
     justify-content: center;
