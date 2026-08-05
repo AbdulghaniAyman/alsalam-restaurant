@@ -119,10 +119,9 @@ body {
 
 .categories-bar {
     display: flex;
+    flex-wrap: wrap; /* السماح للأقسام بالنزول لسطر جديد بدلاً من الاختفاء في تمرير أفقي */
     gap: 10px;
-    overflow-x: auto;
     padding: 5px;
-    scrollbar-width: none;
     justify-content: center;
 }
 
